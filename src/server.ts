@@ -1,5 +1,9 @@
 import express from "express"
 
+// Quando quero importar o arquivo index dentro de uma pasta nao preciso referencia-lo o java script reconhece
+// quando estanciamos somente a pasta sem apontar o arquivo index
+import "./database"
+
 const app = express()
 
 /** METODODS QUE VAMOS UTILIZAR NO PROJETO
