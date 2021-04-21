@@ -1,4 +1,28 @@
-# Help de inicialização de Projeto
+## 💻 Projeto
+
+Esse projeto é minha versão pessoal da semana NLW 5ª Edição, é uma aplicação backend de Chat de mensgame instanea utilizando WebSocket para realizar comunicação
+
+
+## 🚀 Tecnologias
+Esse repositorio é minha versão de estudo pessoal da maratona Discover 2 da Rocket Seat!
+
+Nesse projeto utilizei as tecnologias 
+- NodeJs
+- JavaScript
+- TypeScript
+- TypeORM
+- SQLite
+
+
+## Como reproduzir o projeto
+`*EM DESENVOLVIMENTO...quando finalizar o projeto atualizo com os comandos necessarios!`
+
+
+É necessario ter NodeJs instalado na maquina no caso utilizei a versão `v15.12.0`.
+
+
+
+# Help de construção do projeto  Step By Step
 
 Criando package.json
 ```
@@ -135,6 +159,5 @@ Iniciar Projeto
 yarn dev
 ```
 
-
 ### Mapear entidades dentro o ormconfig.json
-
+`"entities": ["./src/entities/**.ts"],`

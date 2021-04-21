@@ -16,7 +16,12 @@ class SettingsControllers {
         })
 
         await settingsRepository.save(settings)
-
+        /**
+         * Retorna JSON com Resultado do Insert, para funcionar é necessario ir no aquivo:
+         * server.ts e incluir a linh a abaixo senão o postman ou outro ferramenta não conseue gerar o retorno via JSON
+         * 
+         * app.use(express.json())
+         */
         return res.json(settings)
 
     }
