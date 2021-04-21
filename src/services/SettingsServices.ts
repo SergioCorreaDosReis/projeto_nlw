@@ -1,4 +1,3 @@
-import { throws } from "node:assert"
 import { getCustomRepository } from "typeorm"
 import { SettingsRepository } from "../repositories/SettingsRepository"
 

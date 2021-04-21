@@ -161,3 +161,13 @@ yarn dev
 
 ### Mapear entidades dentro o ormconfig.json
 `"entities": ["./src/entities/**.ts"],`
+
+Comando para criar migrations Users
+```
+yarn typeorm migration:create -n CreateUsers
+```
+
+Executa denovo comando para criar migrations para criar nova migrations
+```
+yarn typeorm migration:run
+```

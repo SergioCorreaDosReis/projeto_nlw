@@ -4,26 +4,18 @@ import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryColumn } fro
 // Vamos utilizar a versão 4 por usar numeros aleatorios
 import { v4 as uuid } from "uuid"
 
-// Definir as anotations que referenciam a estrutura dastabelas no SQL
-@Entity("settings")
-class Setting {
-
+@Entity("users")
+class User {
     @PrimaryColumn()
     id: string
 
     @Column()
-    username: string
-
-    @Column()
-    chat: boolean
-
-    @UpdateDateColumn()
-    updated_at: Date
+    email: string
 
     @CreateDateColumn()
     created_at: Date
 
-// Se o id for vazio então o id será gerado a partir do metodo uuid
+    // Se o id for vazio então o id será gerado a partir do metodo uuid
     constructor() {
         if (!this.id) {
             this.id = uuid()
@@ -32,4 +24,4 @@ class Setting {
 
 }
 
-export { Setting }
+export { User }
