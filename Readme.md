@@ -130,5 +130,11 @@ Como essa biblioteca tem tipagens, devo adicionar como depencia de desenvolvimen
 yarn add @types/uuid -D
 ```
 
+Iniciar Projeto
+```
+yarn dev
+```
+
+
 ### Mapear entidades dentro o ormconfig.json
 
