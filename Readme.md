@@ -85,7 +85,9 @@ As migrations são basicamente um genrenciamento um historico de tudo que esta s
 
 Por exemplo estruturas de tabelas, fluxo de cadastros etc.
 
-Importante dentro do arquivo ```ormconfig.json```  na parte "migrations": colococar o conteúdo dento de [] senão ele cria o migrations na raiz do diretório
+Importante dentro do arquivo ```ormconfig.json```  na parte "migrations": 
+
+Deve colocar o conteúdo dento de [] senão ele cria o migrations na raiz do diretório `./`
 ```json
 {...
     "migrations": ["./src/database/migrations/**.ts"],
@@ -97,3 +99,18 @@ Comando para criar migrations Settings
 ```
 yarn typeorm migration:create -n CreateSettings
 ```
+
+Comando para executar a migrations
+```
+yarn typeorm migration:run
+```
+
+Comando para executar a migrations
+```
+yarn typeorm migration:revert
+```
+## Iniciar  a migration, ou seja criar as tabelas
+```yarn
+ yarn typeorm migration:run
+ ```
+
