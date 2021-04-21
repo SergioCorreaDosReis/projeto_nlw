@@ -121,4 +121,14 @@ Entrar dentro de arquivo `tsconfig.json` e descomentar os trechos:
 "emitDecoratorMetadata": true,  
  ```
 
- Configurar o id
+ Configurar o uuid pelo projeto
+```
+yarn add uuid
+```
+Como essa biblioteca tem tipagens, devo adicionar como depencia de desenvolvimento
+```
+yarn add @types/uuid -D
+```
+
+### Mapear entidades dentro o ormconfig.json
+
