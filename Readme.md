@@ -124,7 +124,7 @@ Comando para criar migrations Settings
 yarn typeorm migration:create -n CreateSettings
 ```
 
-Comando para executar a migrations
+Comando para executar a migrations / Ou seja criar as tabelas e estruturas de banco caso nao existam
 ```
 yarn typeorm migration:run
 ```
@@ -171,3 +171,9 @@ Executa denovo comando para criar migrations para criar nova migrations
 ```
 yarn typeorm migration:run
 ```
+
+Comando para criar migrations Messages
+```
+yarn typeorm migration:create -n CreateMessages
+```
+ 

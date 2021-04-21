@@ -1,5 +1,5 @@
 
-import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryColumn } from "typeorm"
+import { Entity, Column, CreateDateColumn, PrimaryColumn } from "typeorm"
 
 // Vamos utilizar a versão 4 por usar numeros aleatorios
 import { v4 as uuid } from "uuid"
