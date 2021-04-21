@@ -15,7 +15,7 @@ class Setting {
     username: string
 
     @Column()
-    chat: string
+    chat: boolean
 
     @UpdateDateColumn()
     updated_at: Date
