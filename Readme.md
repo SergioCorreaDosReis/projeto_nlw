@@ -114,3 +114,11 @@ yarn typeorm migration:revert
  yarn typeorm migration:run
  ```
 
+Entrar dentro de arquivo `tsconfig.json` e descomentar os trechos:
+/* Experimental Options */
+```
+"experimentalDecorators": true, 
+"emitDecoratorMetadata": true,  
+ ```
+
+ Configurar o id
