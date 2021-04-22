@@ -176,4 +176,24 @@ Comando para criar migrations Messages
 ```
 yarn typeorm migration:create -n CreateMessages
 ```
- 
+
+## WS - WebSocket
+Socket.IO é uma biblioteca JavaScript para aplicativos da web em tempo real. 
+
+Permite comunicação bidirecional em tempo real entre clientes e servidores da Web. 
+
+Ele tem duas partes: uma biblioteca do lado do cliente que é executada no navegador e uma biblioteca do lado do servidor para o Node.js.
+
+Fonte: `Wikipedia`
+
+Para instalar a biblioteca socket.io
+```
+yarn add socket.io
+```
+Instalar as tipagens do socket.io como dependencias de Desenvolvimento:
+```
+yarn add @types/socket.io -D
+```
+Instalar modulo EJS
+```
+yarn add ejs
