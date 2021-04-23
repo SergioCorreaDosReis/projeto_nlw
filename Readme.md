@@ -203,3 +203,13 @@ Como estamos utilizando client na aplicação precisamos instalar o o cliente do
 ```
 yarn add socket.io-client
 ```
+
+Comando para criar migrations Connections
+```
+yarn typeorm migration:create -n CreateConnections
+```
+
+Executa denovo comando para criar migrations para criar nova migrations
+```
+yarn typeorm migration:run
+```
