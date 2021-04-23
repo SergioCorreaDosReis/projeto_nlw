@@ -186,7 +186,7 @@ Ele tem duas partes: uma biblioteca do lado do cliente que é executada no naveg
 
 Fonte: `Wikipedia`
 
-Para instalar a biblioteca socket.io
+Para instalar a biblioteca socket.io, (Esse é somente o Server), se for utilizar o cliente tem que instalar separado, conforme comando um pouco mais adiante nesse arquivo
 ```
 yarn add socket.io
 ```
@@ -197,3 +197,9 @@ yarn add @types/socket.io -D
 Instalar modulo EJS
 ```
 yarn add ejs
+ ```  
+Como estamos utilizando client na aplicação precisamos instalar o o cliente do socket.io
+
+```
+yarn add socket.io-client
+```
