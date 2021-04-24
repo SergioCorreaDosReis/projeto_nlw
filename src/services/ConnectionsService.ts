@@ -38,6 +38,14 @@ class ConnectionsService {
         })
         return connection
     }
+    // retorna todos os usuarios sem administrador ou seja que ainda não foram atendidos
+    async findAllWithoutAdmin() {
+        const connections = await this.connectionsRepository.find({
+            where: { admin_id: null } ,
+            relations: ["user"],
+        })
+        return connections
+    }
 }
 
 
