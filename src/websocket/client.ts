@@ -3,7 +3,7 @@ import { ConnectionsService } from "../services/ConnectionsService"
 import { UsersService } from "../services/UsersService"
 import { MessagesService } from "../services/MessagesService"
 
-interface IParams{
+interface IParams {
     text: string
     email: string
 }
@@ -51,10 +51,31 @@ io.on("connect", (socket) => {
             user_id
         })
 
-        const allMessages =  await messagesService.listByUser(user_id)
+        const allMessages = await messagesService.listByUser(user_id)
 
         socket.emit("client_list_all_messages", allMessages)
+        
+        const allUsers = await connectionsService.findAllWithoutAdmin()
+        io.emit("admin_list_all_users", allUsers)
     })
+
+    socket.on("client_send_to_admin", async (params) => {
+        const { text, socket_admin_id } = params
+
+        const socket_id = socket.id
+
+        const { user_id } = await connectionsService.findBySocketId(socket.id)
+
+        const message = await messagesService.create({
+            text,
+            user_id
+        })
+
+        // Envia evento/mensagem para o administrador
+        io.to(socket_admin_id).emit("admin_receive_message", {
+            message,
+            socket_id
+        })
+    })
+
 })
-
-
