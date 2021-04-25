@@ -1,6 +1,6 @@
 ## 💻 Projeto
 
-Esse projeto é minha versão pessoal da semana NLW 5ª Edição, é uma aplicação backend de Chat de mensgame instanea utilizando WebSocket para realizar comunicação
+Esse projeto é minha versão pessoal da semana NLW 5ª Edição, é uma aplicação backend de Chat de mensagens instantaneas utilizando WebSocket para realizar comunicação
 
 <p align="center">
  
