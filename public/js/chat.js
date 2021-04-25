@@ -22,7 +22,7 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
             email,
             text
         }
-        socket.emit("client_first_acess", params, (call, err) => {
+        socket.emit("client_first_access", params, (call, err) => {
             if (err) {
                 console.err(err)
             } else {
@@ -30,6 +30,7 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
             }
         })
     })
+
     socket.on("client_list_all_messages", (messages) => {
         var template_client = document.getElementById("message-user-template").innerHTML
         var template_admin = document.getElementById("admin-template").innerHTML
@@ -53,6 +54,7 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
 
     socket.on("admin_send_to_client", (message) => {
         socket_admin_id = message.socket_id
+
         const template_admin = document.getElementById("admin-template").innerHTML
 
         const rendered = Mustache.render(template_admin, {
@@ -81,5 +83,7 @@ document.querySelector("#send_message_button").addEventListener("click", (event)
         email: emailUser
     })
     document.getElementById("messages").innerHTML += rendered
-    
+
+    text.value = '';
+
 })

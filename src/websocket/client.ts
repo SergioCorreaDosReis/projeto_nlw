@@ -8,14 +8,14 @@ interface IParams {
     email: string
 }
 
-// Criar o promeiro evento
+// Criar o primeiro evento
 io.on("connect", (socket) => {
     const connectionsService = new ConnectionsService()
     const usersService = new UsersService()
     const messagesService = new MessagesService()
 
 
-    socket.on("client_first_acess", async (params) => {
+    socket.on("client_first_access", async (params) => {
         const socket_id = socket.id
         const { text, email } = params as IParams
         let user_id = null
