@@ -2,6 +2,11 @@
 
 Esse projeto é minha versão pessoal da semana NLW 5ª Edição, é uma aplicação backend de Chat de mensgame instanea utilizando WebSocket para realizar comunicação
 
+<p align="center">
+ 
+![Gif de utilização do sistema](./public/images/chatApp.gif)
+</p>
+
 
 ## 🚀 Tecnologias
 Esse repositorio é minha versão de estudo pessoal da maratona Discover 2 da Rocket Seat!
