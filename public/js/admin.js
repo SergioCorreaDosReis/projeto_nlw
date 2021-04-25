@@ -7,7 +7,7 @@ socket.on("admin_list_all_users", (connections) => {
 
     let template = document.getElementById("template").innerHTML
 
-    connections.forEach(connection => {
+    connections.forEach((connection) => {
         const rendered = Mustache.render(template, {
             email: connection.user.email,
             id: connection.socket_id
@@ -18,7 +18,7 @@ socket.on("admin_list_all_users", (connections) => {
 })
 
 function call(id) {
-    const connection = connectionsUsers.find(connection => connection.socket_id === id)
+    const connection = connectionsUsers.find((connection) => connection.socket_id === id)
 
     const template = document.getElementById("admin_template").innerHTML
 
@@ -33,10 +33,12 @@ function call(id) {
         user_id: connection.user_id
     }
 
-    socket.emit("admin_list_messages_by_user", params, messages => {
+    socket.emit("admin_user_in_support",params)
+
+    socket.emit("admin_list_messages_by_user", params,(messages) => {
         const divMessages = document.getElementById(`allMessages${connection.user_id}`)
 
-        messages.forEach(message => {
+        messages.forEach((message) => {
             const createDiv = document.createElement("div")
 
             if (message.admin_id === null) {
@@ -85,7 +87,7 @@ function sendMessage(id) {
 }
 
 socket.on("admin_receive_message", (data) => {
-    const connection = connectionsUsers.find(connection => connection.socket_id = data.socket_id )
+    const connection = connectionsUsers.find((connection) => connection.socket_id === data.socket_id )
 
     const divMessages = document.getElementById(`allMessages${connection.user_id}`)
     const createDiv = document.createElement("div")
